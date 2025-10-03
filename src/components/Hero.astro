@@ -3,52 +3,130 @@ import { Image } from 'astro:assets';
 import heroImg from '../assets/hero-image.png';
 ---
 
-<section class="bg-white py-20">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col lg:flex-row items-center">
-      <div class="lg:w-1/2 lg:pr-12">
-        <h1 class="text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6">
-          The first daily care motivation platform
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-200 to-accent-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-accent-200 to-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style="animation-delay: -2s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full mix-blend-multiply filter blur-2xl opacity-50 animate-float" style="animation-delay: -4s;"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 py-20 relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div class="lg:w-1/2 text-center lg:text-left animate-on-scroll">
+        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full text-sm font-semibold text-primary-700 mb-6 animate-bounce-gentle">
+          <span class="w-2 h-2 bg-accent-500 rounded-full mr-2 animate-pulse"></span>
+          Trusted by 30+ million users
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-900 mb-6 leading-tight">
+          The first daily care
+          <span class="bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 bg-clip-text text-transparent animate-gradient">
+            motivation platform
+          </span>
         </h1>
-        <p class="text-xl text-gray-700 mb-8">
+        
+        <p class="text-lg sm:text-xl text-secondary-600 mb-8 max-w-2xl leading-relaxed">
           Your Company uses behavioral science to help people create, establish, and maintain daily behaviors that improve their lives. Health plans see reduced utilization costs, substantial health outcomes, increased quality and Star Ratings.
         </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/solution" class="group relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/25 hover:-translate-y-1">
+            <span class="relative z-10 flex items-center">
+              Explore Solutions
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          </a>
+          
+          <button class="group flex items-center justify-center px-8 py-4 border-2 border-secondary-300 text-secondary-700 rounded-full font-semibold text-lg transition-all duration-300 hover:border-primary-500 hover:text-primary-600 hover:bg-primary-50" id="playButton">
+            <svg class="w-6 h-6 mr-3 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Watch Demo
+          </button>
+        </div>
+        
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-secondary-200">
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">91%</div>
+            <div class="text-sm text-secondary-600">Daily Engagement</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-bold text-accent-600 mb-1">16%</div>
+            <div class="text-sm text-secondary-600">Better Adherence</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">51%</div>
+            <div class="text-sm text-secondary-600">Lower Admissions</div>
+          </div>
+        </div>
       </div>
-      <div class="lg:w-1/2 mt-10 lg:mt-0 relative">
-        <Image 
-          src={heroImg} 
-          alt="Happy family" 
-          class="rounded-lg shadow-xl"
-          width={600}
-          height={400}
-        />
-        <button
-          id="playButton"
-          class="absolute bottom-4 left-4 bg-white bg-opacity-80 text-gray-800 px-4 py-2 rounded-full flex items-center space-x-2 hover:bg-opacity-100 transition duration-300"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span>See how this works</span>
-        </button>
+      
+      <div class="lg:w-1/2 relative animate-on-scroll" style="animation-delay: 0.2s;">
+        <div class="relative">
+          <!-- Floating elements -->
+          <div class="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-primary-400 to-accent-400 rounded-2xl opacity-20 animate-float"></div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent-400 to-primary-400 rounded-2xl opacity-20 animate-float" style="animation-delay: -1s;"></div>
+          
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl hover-lift">
+            <Image 
+              src={heroImg} 
+              alt="Happy family using healthcare technology" 
+              class="w-full h-auto"
+              width={600}
+              height={400}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            
+            <!-- Play button overlay -->
+            <button
+              id="playButtonOverlay"
+              class="absolute inset-0 flex items-center justify-center group"
+            >
+              <div class="bg-white/90 backdrop-blur-sm text-primary-600 p-6 rounded-full shadow-xl transition-all duration-300 group-hover:bg-white group-hover:scale-110">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+          
+          <!-- Floating cards -->
+          <div class="absolute -right-4 top-1/4 bg-white rounded-2xl shadow-xl p-4 animate-float" style="animation-delay: -0.5s;">
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-accent-500 rounded-full animate-pulse"></div>
+              <span class="text-sm font-semibold text-secondary-700">Live Tracking</span>
+            </div>
+          </div>
+          
+          <div class="absolute -left-4 bottom-1/4 bg-white rounded-2xl shadow-xl p-4 animate-float" style="animation-delay: -1.5s;">
+            <div class="flex items-center space-x-3">
+              <div class="w-3 h-3 bg-primary-500 rounded-full animate-pulse"></div>
+              <span class="text-sm font-semibold text-secondary-700">Daily Rewards</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Video Modal -->
-<div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
-  <div class="bg-white rounded-lg p-8 max-w-3xl w-full">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-2xl font-bold">How Your Co. Works</h3>
-      <button id="closeModal" class="text-gray-500 hover:text-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<div id="videoModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+  <div class="bg-white rounded-2xl p-6 max-w-4xl w-full transform scale-95 transition-all duration-300" id="modalContent">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-secondary-900">How Your Company Works</h3>
+      <button id="closeModal" class="p-2 rounded-full hover:bg-secondary-100 transition-colors duration-200">
+        <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
-    <div class="aspect-w-16 aspect-h-9">
+    <div class="aspect-video rounded-xl overflow-hidden">
       <iframe 
         id="youtubeVideo"
         class="w-full h-full"
@@ -61,25 +139,35 @@ import heroImg from '../assets/hero-image.png';
 </div>
 
 <script>
-  // components/Hero.astro
   const playButton = document.getElementById('playButton');
+  const playButtonOverlay = document.getElementById('playButtonOverlay');
   const videoModal = document.getElementById('videoModal');
+  const modalContent = document.getElementById('modalContent');
   const closeModal = document.getElementById('closeModal');
   const youtubeVideo = document.getElementById('youtubeVideo') as HTMLIFrameElement;
 
-  playButton?.addEventListener('click', () => {
-    videoModal?.classList.remove('hidden');
-  });
+  const openModal = () => {
+    videoModal?.classList.remove('opacity-0', 'invisible');
+    modalContent?.classList.remove('scale-95');
+    modalContent?.classList.add('scale-100');
+    document.body.style.overflow = 'hidden';
+  };
 
-  closeModal?.addEventListener('click', () => {
-    videoModal?.classList.add('hidden');
-    youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-  });
+  const closeModalFunc = () => {
+    videoModal?.classList.add('opacity-0', 'invisible');
+    modalContent?.classList.remove('scale-100');
+    modalContent?.classList.add('scale-95');
+    document.body.style.overflow = '';
+    youtubeVideo?.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  };
+
+  playButton?.addEventListener('click', openModal);
+  playButtonOverlay?.addEventListener('click', openModal);
+  closeModal?.addEventListener('click', closeModalFunc);
 
   videoModal?.addEventListener('click', (e) => {
     if (e.target === videoModal) {
-      videoModal.classList.add('hidden');
-      youtubeVideo.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      closeModalFunc();
     }
   });
 </script>
