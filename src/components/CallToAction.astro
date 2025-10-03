@@ -1,33 +1,70 @@
 ---
 ---
 
-<section class="bg-green-600 py-20 relative overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      class="absolute bottom-0 left-0 w-full h-full"
-      preserveAspectRatio="none"
-    >
-      <path
-        fill="rgba(255,255,255,0.1)"
-        fill-opacity="1"
-        d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,176C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
+<section class="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white relative overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-600/50 to-transparent"></div>
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent-400/20 rounded-full blur-3xl animate-float" style="animation-delay: -2s;"></div>
   </div>
   
   <div class="container mx-auto px-4 relative z-10">
-    <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-auto text-center">
-      <h2 class="text-5xl font-serif font-bold text-green-600 mb-16">
-        ROI is guaranteed
-      </h2>
-      <p class="text-2xl font-serif text-gray-700 mb-12">
-        We only get paid when you see care plan adherence.
-      </p>
-      <p class="text-2xl font-serif text-gray-700 mb-4">
-        Your Company's partners have given over $15,000,000 in rewards back to their members for daily healthy behaviors.
-      </p>
+    <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+      <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 shadow-2xl border border-white/20">
+        <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white mb-8">
+          <span class="w-2 h-2 bg-accent-300 rounded-full mr-2 animate-pulse"></span>
+          Guaranteed Results
+        </div>
+        
+        <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+          ROI is <span class="bg-gradient-to-r from-accent-300 to-white bg-clip-text text-transparent">guaranteed</span>
+        </h2>
+        
+        <div class="space-y-6 mb-12">
+          <p class="text-2xl font-medium text-primary-100">
+            We only get paid when you see care plan adherence.
+          </p>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+            <p class="text-xl text-primary-100 leading-relaxed">
+              Your Company's partners have given over <span class="font-bold text-accent-300">$15,000,000</span> in rewards back to their members for daily healthy behaviors.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-accent-300 mb-2">3:1</div>
+            <div class="text-primary-200">Average ROI Ratio</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-accent-300 mb-2">6 months</div>
+            <div class="text-primary-200">Time to ROI</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-accent-300 mb-2">91%</div>
+            <div class="text-primary-200">Member Engagement</div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="inline-flex items-center bg-white text-primary-700 font-bold py-4 px-8 rounded-full hover:bg-primary-50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+            <span>Calculate Your ROI</span>
+            <svg class="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          
+          <a href="/outcomes" class="inline-flex items-center border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-primary-700 transition-all duration-300 group">
+            <span>View Success Stories</span>
+            <svg class="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
