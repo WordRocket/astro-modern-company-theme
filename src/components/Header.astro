@@ -3,11 +3,12 @@ import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
 
 const navItems = [
-  { label: 'Solution', href: '/solution' },
-  { label: 'Who We Help', href: '/who-we-help' },
-  { label: 'Outcomes', href: '/outcomes' },
-  { label: 'Company', href: '/company' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Our Clinics', href: '/clinics' },
+  { label: 'Conditions', href: '/conditions' },
+  { label: 'Our Team', href: '/team' },
+  { label: 'FAQs', href: '/faqs' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Blog', href: '/blog' },
 ];
 ---
 
@@ -25,7 +26,7 @@ const navItems = [
           />
           <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         </div>
-        <span class="ml-3 text-xl bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Your Company</span>
+        <span class="ml-3 text-xl bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">The Minor Surgery Center</span>
       </a>
       
       <!-- Desktop Navigation -->
@@ -40,8 +41,11 @@ const navItems = [
       
       <!-- CTA Button -->
       <div class="hidden md:flex items-center space-x-4">
+        <a href="tel:647-614-1611" class="text-primary-600 font-semibold hover:text-primary-700 transition-colors duration-200">
+          (647) 614-1611
+        </a>
         <a href="/contact" class="relative overflow-hidden bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5 group">
-          <span class="relative z-10">Contact Us</span>
+          <span class="relative z-10">Book Free Consultation</span>
           <div class="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
         </a>
       </div>
@@ -75,7 +79,7 @@ const navItems = [
             </a>
           ))}
           <a href="/contact" class="block mt-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg">
-            Contact Us
+            Book Free Consultation
           </a>
         </nav>
       </div>
